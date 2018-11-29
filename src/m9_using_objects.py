@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     two_circles()
     circle_and_rectangle()
+    lines()
 
 
 def two_circles():
@@ -52,6 +53,8 @@ def circle_and_rectangle():
     circle=rg.Circle(rg.Point(200,200),50)
     rectangle = rg.Rectangle(rg.Point(0,0),rg.Point(100,100))
     circle.fill_color = "blue"
+    circle.attach_to(window)
+    rectangle.attach_to(window)
     print(circle.outline_thickness)
     print(circle.fill_color)
     print(circle.center)
@@ -59,9 +62,12 @@ def circle_and_rectangle():
     print(circle.center.y)
     print(rectangle.outline_thickness)
     print(rectangle.fill_color)
-    print(rectangle.center)
-    print(rectangle.center.x)
-    print(rectangle.center.y)
+    print(rg.Point((rectangle.corner_1.x+rectangle.corner_2.x)/2,(rectangle.corner_1.y+rectangle.corner_2.y)/2))
+    print((rectangle.corner_1.x+rectangle.corner_2.x)/2)
+    print((rectangle.corner_1.y+rectangle.corner_2.y)/2)
+    window.render()
+    window.close_on_mouse_click()
+
     """
     -- Constructs an rg.RoseWindow.
     -- Constructs and draws a rg.Circle and rg.Rectangle
@@ -93,7 +99,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its green doc-string above.
+    # DONE: 3. Implement this function, per its green doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -104,6 +110,19 @@ def circle_and_rectangle():
 
 
 def lines():
+    window=rg.RoseWindow(500,500)
+    line1=rg.Line(rg.Point(0,0),rg.Point(100,25))
+    line2=rg.Line(rg.Point(50,200),rg.Point(328,381))
+    line2.thickness=10
+    point=line2.get_midpoint()
+    line1.attach_to(window)
+    line2.attach_to(window)
+    window.render()
+    print(" ")
+    print(point)
+    print(point.x)
+    print(point.y)
+    window.close_on_mouse_click()
     """
     -- Constructs a rg.RoseWindow.
     -- Constructs and draws on the window two rg.Lines such that:
@@ -125,7 +144,7 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
 
 
 # -----------------------------------------------------------------------------
