@@ -305,6 +305,7 @@ def fancy_sums_of_digits(n):
     x = n ** 1000
     y = n ** 999
     return sum_of_digits(x ** y)
+
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # This unusual form is necessary for the special testing we provided.
