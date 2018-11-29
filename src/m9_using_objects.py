@@ -55,6 +55,13 @@ def circle_and_rectangle():
     print(circle.outline_thickness)
     print(circle.fill_color)
     print(circle.center)
+    print(circle.center.x)
+    print(circle.center.y)
+    print(rectangle.outline_thickness)
+    print(rectangle.fill_color)
+    print(rectangle.center)
+    print(rectangle.center.x)
+    print(rectangle.center.y)
     """
     -- Constructs an rg.RoseWindow.
     -- Constructs and draws a rg.Circle and rg.Rectangle
