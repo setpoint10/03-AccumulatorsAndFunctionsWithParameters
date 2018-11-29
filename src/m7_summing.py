@@ -29,26 +29,20 @@ def run_test_sum_cosines():
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
 
-    expected = 16
     answer = sum_cosines(5)
-    print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 16
     answer = sum_cosines(7)
-    print('Test 2 expected:', expected)
     print('       actual:  ', answer)
 
-    expected = 16
-    answer = sum_cosines(9)
-    print('Test 3 expected:', expected)
+    answer = sum_cosines(3)
     print('       actual:  ', answer)
 
 
 def sum_cosines(n):
     total=0
     for k in range(n+1):
-        total = total + math.cos(n)
+        total = total + math.cos(k)
     return total
 
     """
@@ -93,7 +87,7 @@ def run_test_sum_square_roots():
     print('       actual:  ', answer)
 
     expected = 16
-    answer = sum_square_roots(4)
+    answer = sum_square_roots(5)
     print('       actual:  ', answer)
 
 
